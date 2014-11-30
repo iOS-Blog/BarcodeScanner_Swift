@@ -14,6 +14,8 @@
 		C489A64D1A2968FD009ECF89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C489A64C1A2968FD009ECF89 /* Images.xcassets */; };
 		C489A6501A2968FD009ECF89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C489A64E1A2968FD009ECF89 /* LaunchScreen.xib */; };
 		C489A65C1A2968FD009ECF89 /* barcodeTestReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489A65B1A2968FD009ECF89 /* barcodeTestReaderTests.swift */; };
+		D0ED0BDE1A2B56310090FCED /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED0BDD1A2B56310090FCED /* ReaderViewController.swift */; };
+		D0ED0BE81A2B566B0090FCED /* RSBarcodes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0ED0BE41A2B565C0090FCED /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,34 @@
 			remoteGlobalIDString = C489A63C1A2968FD009ECF89;
 			remoteInfo = barcodeTestReader;
 		};
+		D0ED0BE31A2B565C0090FCED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0ED0BDF1A2B565C0090FCED /* RSBarcodes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D08336371A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
+		D0ED0BE51A2B56600090FCED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0ED0BDF1A2B565C0090FCED /* RSBarcodes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D08336361A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0ED0BE71A2B56640090FCED /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0ED0BE81A2B566B0090FCED /* RSBarcodes.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C489A63D1A2968FD009ECF89 /* barcodeTestReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeTestReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +67,8 @@
 		C489A6551A2968FD009ECF89 /* barcodeTestReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barcodeTestReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C489A65A1A2968FD009ECF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C489A65B1A2968FD009ECF89 /* barcodeTestReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcodeTestReaderTests.swift; sourceTree = "<group>"; };
+		D0ED0BDD1A2B56310090FCED /* ReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		D0ED0BDF1A2B565C0090FCED /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = RSBarcodes_Swift/RSBarcodes.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +110,10 @@
 		C489A63F1A2968FD009ECF89 /* barcodeTestReader */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED0BDF1A2B565C0090FCED /* RSBarcodes.xcodeproj */,
 				C489A6421A2968FD009ECF89 /* AppDelegate.swift */,
 				C489A6471A2968FD009ECF89 /* ViewController.swift */,
+				D0ED0BDD1A2B56310090FCED /* ReaderViewController.swift */,
 				C489A6491A2968FD009ECF89 /* Main.storyboard */,
 				C489A64C1A2968FD009ECF89 /* Images.xcassets */,
 				C489A64E1A2968FD009ECF89 /* LaunchScreen.xib */,
@@ -115,6 +148,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0ED0BE01A2B565C0090FCED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED0BE41A2B565C0090FCED /* RSBarcodes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +166,12 @@
 				C489A6391A2968FD009ECF89 /* Sources */,
 				C489A63A1A2968FD009ECF89 /* Frameworks */,
 				C489A63B1A2968FD009ECF89 /* Resources */,
+				D0ED0BE71A2B56640090FCED /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D0ED0BE61A2B56600090FCED /* PBXTargetDependency */,
 			);
 			name = barcodeTestReader;
 			productName = barcodeTestReader;
@@ -182,6 +225,12 @@
 			mainGroup = C489A6341A2968FD009ECF89;
 			productRefGroup = C489A63E1A2968FD009ECF89 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D0ED0BE01A2B565C0090FCED /* Products */;
+					ProjectRef = D0ED0BDF1A2B565C0090FCED /* RSBarcodes.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C489A63C1A2968FD009ECF89 /* barcodeTestReader */,
@@ -189,6 +238,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D0ED0BE41A2B565C0090FCED /* RSBarcodes.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSBarcodes.framework;
+			remoteRef = D0ED0BE31A2B565C0090FCED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C489A63B1A2968FD009ECF89 /* Resources */ = {
@@ -218,6 +277,7 @@
 				C489A6481A2968FD009ECF89 /* ViewController.swift in Sources */,
 				C489A6431A2968FD009ECF89 /* AppDelegate.swift in Sources */,
 				C489A6461A2968FD009ECF89 /* barcodeTestReader.xcdatamodeld in Sources */,
+				D0ED0BDE1A2B56310090FCED /* ReaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +296,11 @@
 			isa = PBXTargetDependency;
 			target = C489A63C1A2968FD009ECF89 /* barcodeTestReader */;
 			targetProxy = C489A6561A2968FD009ECF89 /* PBXContainerItemProxy */;
+		};
+		D0ED0BE61A2B56600090FCED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes;
+			targetProxy = D0ED0BE51A2B56600090FCED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -409,6 +474,7 @@
 				C489A6611A2968FD009ECF89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C489A6621A2968FD009ECF89 /* Build configuration list for PBXNativeTarget "barcodeTestReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +483,7 @@
 				C489A6641A2968FD009ECF89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
